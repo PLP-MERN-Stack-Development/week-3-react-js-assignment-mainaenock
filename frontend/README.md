@@ -172,6 +172,31 @@ src/
 
 The application can be deployed to various platforms:
 
+### GitHub Pages (Recommended)
+
+#### Method 1: Automatic Deployment with GitHub Actions
+1. **Push your code to GitHub** - The GitHub Actions workflow will automatically build and deploy your app
+2. **Enable GitHub Pages** in your repository settings:
+   - Go to Settings → Pages
+   - Source: Deploy from a branch
+   - Branch: `gh-pages` (will be created automatically)
+   - Folder: `/ (root)`
+3. **Your app will be available at**: `https://yourusername.github.io/week-3-react-js-assignment-mainaenock/`
+
+#### Method 2: Manual Deployment
+```bash
+# Build the application
+cd frontend
+npm run build
+
+# Deploy using the provided script
+cd ..
+chmod +x deploy.sh
+./deploy.sh
+
+# Or manually copy files and push to gh-pages branch
+```
+
 ### Vercel
 ```bash
 npm run build
@@ -182,12 +207,6 @@ npm run build
 ```bash
 npm run build
 # Deploy the dist folder to Netlify
-```
-
-### GitHub Pages
-```bash
-npm run build
-# Deploy the dist folder to GitHub Pages
 ```
 
 ## 📸 Screenshots
